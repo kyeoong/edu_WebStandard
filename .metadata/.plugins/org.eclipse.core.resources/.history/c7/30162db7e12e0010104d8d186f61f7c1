@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+	<figure>
+		<img alt="" src="images/images/pf.png">
+		<figcaption>오늘은 남은 인생이 시작되는 첫째날</figcaption>
+	</figure>
+
+	<h1>홍길동</h1>
+	<p>이메일 : kkk@gmail.com</p>
+	<h2>Who I am?</h2>
+	<p>프런트엔드 웹 기술(Front-end Web Tech.)에 관심을 가지고 있습니다.<br>
+	정보처리기사로 활동 중이며, <br> 제주의 한 시골 
+	마을에서 코딩 중입니다.</p>
+	
+	<h2>SNS</h2>
+	<ul>
+		<li><a href="http://www.naver.com" target="_blank"> 네이버(blank)</a></li>
+		<li><a href="http://www.daum.net"  target="_self">  다음(self)</a></li>	
+	
+	</ul>
+	
+	<h2>SKILLs</h2>
+	<ul>
+		<li> 사용언어
+			<ul>
+				<li><mark>HTML</mark></li>
+				<li><mark>CSS</mark></li>
+				<li>Javascript</li>
+		<li>Spring</li>
+			</ul>
+		</li>
+	</ul>
+	<ul>
+		<li> 사용언어
+			<ul>
+				<li>eclipse</li>
+				<li>oracle</li> 
+				<li><b>STS</b></li>     <!--   <b> <strong> 글자 굵게   -->
+			</ul>
+		</li>
+	</ul>
+	
+	<h2>Academic</h2>
+	<table border="1">
+	<caption>학력사항</caption>
+	<thead>
+	<tr>
+	<th>출신학교</th>
+	<th>전공</th>
+	<th>기간</th>
+	<th>졸업구분</th>
+	</tr>
+	</thead>
+	
+	
+	
+	
+	
+	</table>
+	
+	
+	
+	
+	
+	
+	
+</body>
+</html>

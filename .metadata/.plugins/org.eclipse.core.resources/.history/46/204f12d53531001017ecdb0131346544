@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script type="text/javascript">
+	let banner = new Array();
+	for(var i = 0; i<7 ; i++) {
+		banner[i] = "../images"+i+".jpg";
+	}
+	
+	var ranNumber = Math.random()* 7;  // 0.0 <= ~ < 1.0 소수점 사이 값이라 소수점이 나온다 
+	document.write("ranNumber = " + ranNumber);
+	var ran = Math.floor(ranNumber);  // 그래서 내림을 하여 정수로 만들기
+	document.write("<br>ran = " + ran);
+	document.write("<img src = "+banner[ran]+">")
+</script>
+</head>
+<body>
+	<h1>math03</h1>
+</body>
+</html>

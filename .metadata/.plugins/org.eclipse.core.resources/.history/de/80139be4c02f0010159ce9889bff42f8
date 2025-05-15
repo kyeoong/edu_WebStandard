@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<style type="text/css">
+
+</style>
+</head>
+<body>
+	<div id="container">
+		<div id="header">
+			<h1>사이트 제목 ***</h1>
+			<h3>큰 메뉴 --> ul</h3>
+		</div>
+		<div id="sidebar">
+		
+		</div>
+		<div id="contents">
+		
+		</div>
+		<div id="footer">
+		
+		</div>
+	
+	</div>
+</body>
+</html>

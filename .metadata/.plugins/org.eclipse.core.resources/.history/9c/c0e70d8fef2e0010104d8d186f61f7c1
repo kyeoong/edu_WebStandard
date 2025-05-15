@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+	<form action="">
+		<label>아이디 : </label>
+		<input type="text" id="user_id" name="user_name">
+	
+	</form>
+</body>
+</html>

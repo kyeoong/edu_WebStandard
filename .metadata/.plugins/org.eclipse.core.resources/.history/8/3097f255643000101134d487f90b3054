@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<style type="text/css">
+	li {
+		list-style: none;
+		
+		float: left;
+		margin: 10px;
+	}
+	
+	li a {
+	padding: 5px 20px;
+	font-size: 17px;
+	color: blue;
+	text-decoration: none;
+	}
+	
+</style>
+</head>
+<body>
+	<ul>
+		<li>외국어 서비스 : </li>
+		<li><a href="#" title="us">영어</a></li>
+		<li><a href="#" title="us-english">영어</a></li>
+		<li><a href="#" title="jap-anese">일본어</a></li>
+		<li><a href="#" title="japanese">일본어</a></li>
+	</ul>
+</body>
+</html>

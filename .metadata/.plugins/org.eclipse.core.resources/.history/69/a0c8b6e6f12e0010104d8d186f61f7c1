@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+	<ul>
+		<li>
+			<label>점유율 0.8</label>
+			<!-- 전체 크기 1을 기준으로 0.8만큼 차지합니다 -->
+			<meter value="0.8"></meter>    
+		</li>
+		<li>
+			
+		</li>
+		<li>
+			
+		</li>
+	
+	</ul>
+</body>
+</html>

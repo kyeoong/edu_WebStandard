@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script type="text/javascript">
+	var a = parseInt(prompt("1~7사이 숫자를 입력하세요"));
+	// 변수에 할당된 타입 출력
+	console.log(typeof a);
+	
+	// if 
+	// else if 
+	// else
+	// a<1 || a>7 ->잘못 입력하셨습니다
+	// 문자 입력     ->숫자가 아닙니다
+	// 정상입력 -> Switch
+	//        1) fontcolor -> red      , msg->1 입력하셨습니다
+	//        2) fontcolor -> orange   , msg->2 입력하셨습니다
+	//        3) fontcolor -> yellow   , msg->3 입력하셨습니다
+	//        4) fontcolor -> green    , msg->4 입력하셨습니다
+	//        5) fontcolor -> blue     , msg->5 입력하셨습니다
+	//        6) fontcolor -> navy     , msg->6 입력하셨습니다
+	//        default) fontcolor -> violet,  , msg->7 입력하셨습니다
+	
+	if(a<1 || a>7){
+		document.write("숫자가 아닙니다")
+		
+	}
+	else if(isNaN(a)) document.write("숫자가 아닙니다")
+	else {
+		switch(a){
+		case 1 :
+			var msg = "1 입력하셨습니다";
+			document.write(msg.fontcolor("red"));
+			break;
+		case 2 :
+			var msg = "2 입력하셨습니다";
+			document.write(msg.fontcolor("orange"));
+			break;
+		case 3 :
+			var msg = "3 입력하셨습니다";
+			document.write(msg.fontcolor("yellow"));
+			break;
+		case 4 :
+			var msg = "4 입력하셨습니다";
+			document.write(msg.fontcolor("green"));
+			break;
+		case 5 :
+			document.write("5 입력하셨습니다".fontcolor("blue"));
+			break;
+		case 6 :
+			var msg = "6 입력하셨습니다";
+			document.write(msg.fontcolor("navy"));
+			break;
+		case 7 :
+			var msg = "7 입력하셨습니다";
+			document.write(msg.fontcolor("violet"));
+			break;
+		}
+		
+	}
+	
+</script>
+</head>
+<body>
+	<h1>Switch01</h1>
+</body>
+</html>

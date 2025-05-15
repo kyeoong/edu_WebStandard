@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<style type="text/css">
+	body {
+		background-color: #ffe08c;
+	}
+	
+	form fieldset {
+		margin-bottom: 20px;
+	}
+	
+	form legend {
+		font-size: 15px;
+		font-weight: 600;
+		color: purple;
+	}
+	
+	.reg {
+		font-size: 14px;
+		width: 90px;
+		float: left;
+		font-weight: bold;
+		text-align: right;     /* 오른쪽 박스와 딱 붙는다 */
+		margin-right: 10px;
+	}
+	
+	form ul li {
+		list-style-type: none;
+		margin: 15px 10px 7px;   /* 상 우 하  (좌 -> 우랑 짝지)    --> 시험 문제         */
+		font-size: 10px;
+	}
+	
+	
+
+</style>
+</head>
+<body>
+	<h1>여름방학 특강 신청</h1>
+	<form action="">
+		<fieldset>
+			<legend>수강신청인</legend>
+			<ul>
+				<li>
+					<label class="reg" for="id">학번</label>
+					<input type="text" id="id" name="num">
+				</li>
+				<li>
+					<label class="reg" for="name">이름</label>
+					<input type="text" id="name" name="nm" value="kkk">
+				</li>
+				<li>
+					<label class="reg">***학과***</label>
+					<select id="class" name="class">   <!--   name="class"라는 파라메타에 value="computer"라는 값을 넣어서 서버로 넘어감   -->
+						<option value="archi">건축공학과</option>
+						<option value="mechanic">기계공학과</option>
+						<option value="indust">산업공학과</option>
+						<option value="elec">전기전자공학과</option>
+						<option value="computer" selected>컴퓨터공학과</option>
+						<option value="chemical">화학공학과</option>
+					
+					</select>
+				</li>
+			</ul>
+		</fieldset>
+	
+	
+	</form>
+</body>
+</html>

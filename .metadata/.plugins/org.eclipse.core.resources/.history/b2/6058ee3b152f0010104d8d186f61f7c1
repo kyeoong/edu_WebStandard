@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<style type="text/css">
+	.container {    /*  .을 찍으면 class , # id  */
+		width : 600px;
+		margin : 0 auto;
+	}
+	
+	/* 순서없는 목록에 적용할 스타일 */
+	ul {
+		list-style-type: none; /* 불릿 없앰 */
+	}
+	
+	label.title {
+		font-weight: bold;	   /* 굵은 글자 */
+		width : 80px;          /* 너비 80px */
+		float: left;           /* 가운데 정렬 */
+	}
+	
+	
+	
+	fieldset {
+		margin: 15px 10px;  /* 상하 마진 15px, 좌우 마진 10px */
+	}
+	
+	/* 필드셋의 제목 */
+	fieldset legend {
+		font-weight: bold;
+		font-size: 18px;
+		color: purple;
+	}
+	
+	ul li {
+		margin-bottom: 10px;
+	}
+
+</style>
+</head>
+<body>
+	<form action="kkk.jsp">
+		<div class="container">
+			<h1>상품주문서</h1>
+			<fieldset>
+				<legend>개인정보</legend>
+				<!-- 하나의 필드셋을 아우르는 제목 -->
+
+				<ul>
+					<li><label for="uname" class="title">이름</label> <input
+						type="text" id="uname" placeholder="여백없이 입력" required></li>
+					<li><label for="tell" class="title">연락처</label> <input
+						type="tel" id="tell" placeholder="연락가능한 번호"></li>
+
+				</ul>
+
+
+			</fieldset>
+			<fieldset>
+				<legend>배송지 정보</legend>
+				<ul>
+					<li><label for="address" class="title">주소</label> <input
+						type="text" id="address" placeholder="주소지 입력" required></li>
+
+					<li><label for="phone" class="title">주소</label> <input
+						type="tell" id="phone" placeholder="번호 입력"></li>
+
+					<li><label for="memo" class="title">메모</label> <textarea
+							cols="40" row="3" id="memo"></textarea></li>
+				</ul>
+			</fieldset>
+			<fieldset>
+				<legend>주문 정보</legend>
+					<ul>
+						<li><label><input type="checkbox">과테말라 안티구아(100g)</label>
+						<label><input type="number" value="0" min="0" max="5">개</label>
+						</li>
+						
+						<li>
+						<label><input type="checkbox">인도네시아 만델링(100g)</label>
+						<label><input type="number" value="0" min="0" max="5">개</label>
+						</li>
+						
+						<li>
+						<label><input type="checkbox">탐라는도다(블렌딩)(100g)</label>
+						<label><input type="number" value="0" min="0" max="5">개</label>
+						</li>
+					</ul>
+			</fieldset>
+			<div class="centered">
+				<input type="submit" value="주문하기"> 
+				<input type="reset"  value="다시작성">
+			</div>
+
+		</div>
+
+
+	</form>
+</body>
+</html>

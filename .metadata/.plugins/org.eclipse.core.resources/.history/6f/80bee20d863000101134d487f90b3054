@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script type="text/javascript">
+	document.write("<center>");
+	document.write("<h3> [ 정 수 형 ] </h3>");
+	document.write("<h4>");
+	document.write("<hr> 1 0 진수 ===> " + 10);
+	document.write("<br>&nbsp 8 진수 ===> " + 0o12);   /* &nbsp : 줄 바꾸고 한칸 들여쓰기 */
+	document.write("<br> 1 6 진수 ===> " + 0xc);
+	document.write("<br> 1 6 진수 ===> " + 0x12);
+	document.write("</h4>");
+	document.write("</center>");
+	
+	
+	
+	alert('1');
+	document.write("<br><h3> [ 실 수 형 ] </h3>");
+	document.write("<h4>");
+	document.write("<hr> 소 수 형 ===> "+3.14159);
+	document.write("<br> 지 수 형 ===> "+0.123456e+3);
+	document.write("</h4>");
+</script>
+</head>
+<body>
+	<h1>Char</h1>
+</body>
+</html>

@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script type="text/javascript">
+	var arr = [1, true, "JavaScript"];
+	document.write("arr.length -> " + arr.length + "<br>");
+	document.write("1. arr -> " + arr + "<br>");
+</script>
+</head>
+<body>
+	<h1>Object05</h1>
+</body>
+</html>

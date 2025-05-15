@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script type="text/javascript">
+	var a = new Array(4);
+	document.write("a.length 1 = "+ a.length + "<br>");
+	
+	a[0] = 12;
+	a[1] = 54;
+	a[2] = 2;
+	a[3] = 78;
+	document.write("a.length 2 = "+ a.length + "<br>");
+	document.write("<br> ===전체조회1=== <br>");
+	for (var i = 0; i < a.length ; i++) {
+		document.write("<br>a["+i+"] = "+a[i]);
+	}
+	
+	
+</script>
+</head>
+<body>
+	<h1>Array01</h1>
+</body>
+</html>

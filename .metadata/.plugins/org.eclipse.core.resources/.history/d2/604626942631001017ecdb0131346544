@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script type="text/javascript">
+	var num1 = 20;
+	var num2 = 20;
+	var num3;
+	
+	//변수에 할당 된 값 출력
+	console.log(num1);
+	
+	console.log(typeof num1);
+	
+</script>
+</head>
+<body>
+	<h1>Primitive 변수 확인</h1>
+</body>
+</html>

@@ -1,0 +1,13 @@
+
+5월 12, 2025 10:12:43.03 NEW SESSION
+5월 12, 2025 10:12:43.04 Created TensorFlow Lite XNNPACK delegate for CPU.
+5월 12, 2025 12:01:38.01 [19660:12276:0512/120138.015:ERROR:mojo\public\cpp\bindings\lib\interface_endpoint_client.cc:725] Message 1 rejected by interface blink.mojom.WidgetHost
+5월 12, 2025 12:01:38.01 [19660:12276:0512/120138.015:ERROR:mojo\public\cpp\bindings\lib\interface_endpoint_client.cc:725] Message 1 rejected by interface blink.mojom.WidgetHost
+5월 12, 2025 18:18:29.56 Created TensorFlow Lite XNNPACK delegate for CPU.
+5월 12, 2025 19:11:34.75 Created TensorFlow Lite XNNPACK delegate for CPU.
+
+5월 13, 2025 10:04:01.04 NEW SESSION
+5월 13, 2025 10:04:01.04 Created TensorFlow Lite XNNPACK delegate for CPU.
+5월 13, 2025 10:04:11.49 Created TensorFlow Lite XNNPACK delegate for CPU.
+5월 13, 2025 10:19:44.27 [11876:14948:0513/101944.277:ERROR:mojo\public\cpp\bindings\lib\interface_endpoint_client.cc:725] Message 1 rejected by interface blink.mojom.WidgetHost
+5월 13, 2025 10:19:44.27 [11876:14948:0513/101944.277:ERROR:mojo\public\cpp\bindings\lib\interface_endpoint_client.cc:725] Message 1 rejected by interface blink.mojom.WidgetHost

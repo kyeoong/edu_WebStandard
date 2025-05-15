@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script type="text/javascript">
+	
+</script>
+</head>
+<body>
+	<h1>DOM_04</h1>
+	<h1>이벤트 리스너 삭제</h1>
+	<p>아래 버튼에 마우스를 올리거나 클릭해 보세요!</p>
+	<button>삭제 버튼</button>
+	<p id="text"></p>
+	
+	<script type="text/javascript">
+		
+	</script>
+</body>
+</html>

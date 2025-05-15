@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+				<script type="text/javascript">   /*   행위를 입힌다   */
+					alert("대박\n사건");             /*   얼럿, 팝업창이 뜬다  */
+				</script>
+<style type="text/css">			  /*   디자인을 입힌다  */
+
+</style>
+</head>
+<body>
+	<h1>alter</h1>
+				<script type="text/javascript">   /*   행위를 입힌다   */
+					alert("대박\n사건");             /*   얼럿, 팝업창이 뜬다  */
+				</script>
+</body>
+				<script type="text/javascript">   /*   행위를 입힌다   */
+					alert("대박\n사건");             /*   얼럿, 팝업창이 뜬다  */
+				</script>
+</html>

@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script type="text/javascript">   //script안에 내용은 그저 실행된다 다만 함수는 실행 안된다 위에서 아래로 흐른다
+	//addNum라는 이름의 함수를 정의함.
+	function addNum(x,y) {
+		document.write(x+y);
+		
+	}
+	addNum(2,3); // addNum() 함수에 인수로 2 3을 전달하여 호출
+</script>
+</head>
+<body>
+	<h1>function_01</h1>
+	
+</body>
+</html>

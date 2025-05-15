@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+	<table border="1">
+		<caption>제주특별자치도 학교현황</caption>
+		<thead>
+			<tr>
+				<th>구분</th>
+				<th>학교수</th>
+				<th>학급수</th>
+				<th>학생수</th>
+				<th>교원수</th>
+			</tr>
+		</thead>
+		<tbody>
+		
+		</tbody>
+		<tfoot>
+		
+		</tfoot>
+	</table>
+</body>
+</html>

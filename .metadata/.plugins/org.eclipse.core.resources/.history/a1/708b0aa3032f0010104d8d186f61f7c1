@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+	<h1>여름방학 특강 신청</h1>
+	<form action="">
+		<fieldset>
+			<legend>수강신청인</legend>
+			<ul></ul>
+		</fieldset>
+	
+	
+	</form>
+</body>
+</html>

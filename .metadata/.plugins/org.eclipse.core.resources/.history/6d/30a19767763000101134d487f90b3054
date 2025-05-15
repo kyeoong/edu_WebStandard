@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script type="text/javascript">
+	var boolean1 = true;
+	var boolean2 = false;
+	
+	console.log("boolean1->"+boolean1);
+	console.log("boolean2->"+boolean2);
+</script>
+</head>
+<body>
+	<h1>boolean01</h1>
+</body>
+</html>

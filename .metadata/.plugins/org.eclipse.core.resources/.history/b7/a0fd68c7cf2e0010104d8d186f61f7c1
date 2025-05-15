@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+	<table border="3">
+		<tr>
+			<th>제목 셀1</th>
+			<td>1행 2열</td>
+			<td>1행 3열</td>
+		</tr>
+		<tr>
+			<th>제목 셀2</th>
+			<td>2행 2열</td>
+			<td>2행 3열</td>
+		</tr>
+	</table>
+</body>
+</html>

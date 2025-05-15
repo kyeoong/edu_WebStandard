@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<style type="text/css">
+	li {
+		list-style: none;
+		margin: 10px;
+		float: left;
+		display: inline;
+	}
+	
+	li a {
+		padding: 5px 20px;
+		font-size: 14px;
+		color: green;
+		text-decoration: none;
+	}
+	
+	.flat {
+		background: blue;
+		color: white;
+	}
+</style>
+</head>
+<body>
+	<ul>
+		<li><a href="#">메뉴1</a></li>
+		<li><a href="#">메뉴2</a></li>
+		<li><a href="#" class="button">메뉴3</a></li>
+		<li><a href="#" class="flat button">메뉴4</a></li>
+	</ul>
+</body>
+</html>

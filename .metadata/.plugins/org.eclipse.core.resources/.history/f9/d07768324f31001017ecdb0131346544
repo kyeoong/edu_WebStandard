@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script type="text/javascript">
+	
+</script>
+</head>
+<body>
+	<h1>DOM_02</h1>
+	<p id="text">기본색 검정</p>
+	<button ondblclick="chgRedColor('빨간색')">빨간색</button>
+	<button onclick="chgOrangeColor('오랜지색')">오랜지색</button>
+</body>
+</html>

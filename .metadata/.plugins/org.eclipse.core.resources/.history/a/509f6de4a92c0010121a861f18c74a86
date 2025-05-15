@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+	<h1>1박 2일 가족 여행 코스</h1>
+	<ul>
+		<li>1일차
+			<ol>
+				<li>해녀박물관</li>
+				<li>낚시체험</li>
+			</ol>
+		
+		
+		
+		
+		</li>
+		<li>2일차
+		
+		
+		
+		
+		
+		</li>
+		<li>3일차
+		
+		
+		
+		
+		
+		</li>
+	</ul>
+</body>
+</html>

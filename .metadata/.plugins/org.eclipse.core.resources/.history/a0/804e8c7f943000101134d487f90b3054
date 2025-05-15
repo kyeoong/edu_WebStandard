@@ -1,0 +1,13 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script type="text/javascript">
+	var num = prompt("몇 단 구구단을 원하시는지 입력하시고 확인 버튼 꼭 눌러주세요", "5");
+</script>
+</head>
+<body>
+	<h1>isNaN ***</h1>
+</body>
+</html>

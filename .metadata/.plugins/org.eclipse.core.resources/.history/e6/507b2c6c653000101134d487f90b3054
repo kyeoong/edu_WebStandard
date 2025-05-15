@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<style type="text/css">
+	ul {
+		list-style: none;
+	}
+</style>
+</head>
+<body>
+	<ul>
+		<li>외국어 서비스 : </li>
+		<li><a href="#" title="us">영어</a></li>
+		<li><a href="#" title="japanese">일본어</a></li>
+		<li><a href="#" title="chinese">중국어</a></li>
+	</ul>
+</body>
+</html>

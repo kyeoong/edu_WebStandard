@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script type="text/javascript">
+	// index   0   1          2         3
+	let arr = [1, true, "JavaScript", "End"];
+</script>
+</head>
+<body>
+	<h1>object06</h1>
+</body>
+</html>

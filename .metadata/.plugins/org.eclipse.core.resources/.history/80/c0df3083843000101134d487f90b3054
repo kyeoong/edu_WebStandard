@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script type="text/javascript">
+document.write("<center>");
+document.write("<h3> [ 정 수 형 ] </h3>");
+document.write("<h4>");
+document.write("<hr> 1 0 진수 ===> " + 10);
+document.write("<h3> [ 정 수 형 ] </h3>");
+document.write("<h3> [ 정 수 형 ] </h3>");
+document.write("<h3> [ 정 수 형 ] </h3>");
+document.write("<h3> [ 정 수 형 ] </h3>");
+
+</script>
+
+
+</head>
+<body>
+	<h1>Char</h1>
+</body>
+</html>
