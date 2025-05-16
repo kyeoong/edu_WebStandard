@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script type="text/javascript">
+	function chk(num) {
+		// alert(num);
+		document.images[0].src="../images/"+num+".gif";  // document는 dom을 애기한다 images는 img 태그를 말한다
+		// 배열이 0인 이유는 img 태그가 2개이면 배열로 보기 때문에 0은 첫번째 이미지(alt="3")가 바뀌고 1이면 두번째 이미지(alt="4")가 바뀐다
+	}
+</script>
+</head>
+<body>
+	<h1>dom Image 바꾸기(확장자 gif)</h1>
+	<center>
+		<img alt="3" src="../images/3.gif"><p>
+		<img alt="4" src="../images/4.gif"><p>
+		
+		<button onclick="chk(1)">목마</button>
+		<button onclick="chk(2)">우체통</button>
+		<button onclick="chk(3)">블자동차</button>
+	</center>
+</body>
+</html>

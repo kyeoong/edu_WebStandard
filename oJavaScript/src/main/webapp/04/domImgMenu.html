@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script type="text/javascript">   /*   cascading 이라 위에서 아래로 흐른다 그래서 배열에 각 이미지가 할당되어져 있다  */
+	overImg = new Array();
+	outImg = new Array();
+	for( var i = 0 ; i < 4 ; i ++){
+		overImg[i] = "../images/"+i+"over.jpg";
+		outImg[i] = "../images/"+i+"out.jpg";
+		
+	}
+
+
+	function ov(num) {
+		document.images[num].src=overImg[num];
+	}
+	
+	function ot(num) {
+		document.images[num].src=outImg[num];
+	}
+</script>
+</head>
+<body>
+	<h1>DOM Image Menu 바꾸기</h1>
+	<img src="../images/0out.jpg" onmouseover="ov(0)" onmouseout="ot(0)"><p>
+	<img src="../images/1out.jpg" onmouseover="ov(1)" onmouseout="ot(1)"><p>
+	<img src="../images/2out.jpg" onmouseover="ov(2)" onmouseout="ot(2)"><p>
+	<img src="../images/3out.jpg" onmouseover="ov(3)" onmouseout="ot(3)"><p>
+</body>
+</html>

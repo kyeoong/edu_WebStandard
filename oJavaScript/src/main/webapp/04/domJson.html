@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script type="text/javascript">
+	let wo = {"name":"김경민", "addr":"항공"};   // json은 {} 안에 키 벨류 ""로 감싸준다
+	let woArr = [
+		{"name":"노경민", "subject":"생물"},    // json 배열은 [] 안에 객체는 위와 동일
+		{"name":"박상원", "subject":"통신"},
+		{"name":"박주현", "subject":"화확"}
+	];
+	
+	alert("wo-> "+wo);
+	console.log("wo -> ",wo);
+	alert("JSON.stringify(wo)->"+JSON.stringify(wo));    // JSON.stringify 이 표기법을 알아두기 어마무시 쓰인다
+	alert("JSON.stringify(woArr)->"+JSON.stringify(woArr));
+</script>
+</head>
+<body>
+	<h1>Dom Json (**)</h1>
+</body>
+</html>

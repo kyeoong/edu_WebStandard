@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script type="text/javascript">
+	function chk() {
+		// frm name 이용 1.2.3 , 4 -> getElementById
+		// 1. name -> 이름 입력, focus
+		// 2. age 입력 X  -> 나이 입력, focus
+		// 3. age 숫자가 X -> 나이가 문자임, focus
+		// 4. addr -> 주소좀 넣어줄래, focus
+		
+		if(frm.name.value.length==0){
+			alert("이름을 입력해주세요");
+			frm.name.focus();
+		}
+		
+		if(frm.age.value.length==0){
+			alert("나이 를 입력해주세요");
+			frm.age.focus();
+		}
+		
+		if(isNaN(frm.age.value)) {
+			alert("나이가 문자예요");
+			frm.age.focus();
+			frm.age.value="";
+			return;
+		}
+		
+		var addr = document.getElementById("addr");
+		if(addr.value.length==0) {
+			alert("주소 좀 넣어줘");
+			addr.focus();
+			returnl;
+		}
+		
+	}
+</script>
+</head>
+<body>
+	<h2>입력창</h2>
+	<form action="" name="frm">
+		이름 : <input type="text" name="name"><p>
+		나이 : <input type="text" name="age"><p>
+		주소 : <input type="text" name="addr" id="addr"><p>
+		<input type="button" value="확인" onclick="chk()"><p> 
+	</form>
+</body>
+</html>
