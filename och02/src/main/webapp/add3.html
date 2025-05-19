@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script type="text/javascript" src=""></script>
+<script type="text/javascript">
+	function chk(){
+		if(!frm.num.value){  // num 비었을 때  (!frm.num.value)   (frm.num.value.length=0) 이거 안되네
+			alert("숫자 입력 않하니");
+			frm.num.focus();
+			return false;;
+		}
+		
+		if(isNaN(frm.num.value)){  // num 문자일 때 , is는 아니니
+			alert("숫자가 뭔지 모르니! 헐 ?");
+			frm.num.focus();
+			frm.num.value="";  // 입력된 글자 지워준다
+			return false;   // false면 페이지에 머물러 있고
+		}
+
+		return true;       // true면  action=""로 이동
+	};
+	
+	
+</script>
+</head>
+<body>
+	<h1>숫자를 입력하세용</h1>
+	<!-- <form action="Add3" name="frm" method="get" onsubmit="return chk()"> -->    <!--   get 방식 -->
+	<form action="Add3" name="frm" method="post" onsubmit="return chk()">		     <!--  post 방식 -->
+		숫자 : <input type="text" name="num"> <p>
+		문자 : <input type="text" name="han"> <p>
+			  <input type="submit" value="확인">
+	
+	</form>
+</body>
+</html>
