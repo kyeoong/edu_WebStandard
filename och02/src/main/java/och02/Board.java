@@ -55,8 +55,8 @@ public class Board extends HttpServlet {
 		out.println("<h1>게시판</h1>");
 		out.printf("<p>제목 : " + title +" <br>");
 		out.printf("<p>작성자 : " + writer +" <br>");
-		out.printf("<p>작성일 : " +  date  + "<br>");
-		out.printf("<p>내용 <br>" + content +" </p>");
+		out.printf("<p>작성일 : " +  date  + "<br>");    // new Date() 라고 해도 된다
+		out.printf("<pre>내용 <br>" + content +" </pre>");   // <pre> 태그는 들여쓰기, 공백, 줄바꿈 등이 HTML 그대로 브라우저에 출력   ==> 코드 블록 , 형식 유지 시 사용
 		out.println("</body></html>");
 		
 	}
