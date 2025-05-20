@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script type="text/javascript">
+	function chk() {
+		if(!frm.num1.value) {
+			alert("1 입력");
+			frm.num1.focus();
+			return false;
+		}
+		if(isNaN(frm.num1.value)) {
+			alert("1숫자");
+			frm.num1.value="";
+			return false;
+		}
+		if(!frm.num2.value) {
+			alert("2 입력");
+			frm.num2.focus();
+			return false;
+		}
+		if(isNaN(frm.num2.value)) {
+			alert("2숫자");
+			frm.num2.value="";
+			return false;
+		}
+		return true;
+	}
+</script>
+</head>
+<body>
+<h1>사칙연산할 데이터 입력</h1>
+<!-- <form action="cal.jsp" name="frm" onsubmit="return chk()"> -->
+	<form action="cal2.jsp" name="frm" onsubmit="return chk()">                         <!--  다른 페이지에서 보여준다 -->
+	첫번째 수 : <input type="text" name="num1"><p>
+	두번쨰 수 : <input type="text" name="num2"><p>
+	<input type="submit" value="확인">
+</form>
+
+</body>
+</html>
