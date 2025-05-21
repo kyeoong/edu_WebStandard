@@ -11,5 +11,8 @@ String color = request.getAttribute("color").toString(); // set썼으니까 파�
 
 %>
 <body bgcolor = "<%=color %>">
+<%-- 
+<body bgcolor = "<%=request.getAttribute("color") %>"> 
+--%>
 </body>
 </html>

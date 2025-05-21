@@ -19,7 +19,7 @@ int div = num1 / num2;
 
 //Page 이동방법 (*) 필수
 // 순서1. 파라메타 저장
-request.setAttribute("add", add); // request객체에 request.setAttribute으로 파라미터 넣기
+request.setAttribute("add", add); // request객체에 .setAttribute으로 파라미터 넣기
 request.setAttribute("min", min); // request.getAttribute("min") 으로 꺼내기
 request.setAttribute("mul", mul);
 request.setAttribute("div", div);
