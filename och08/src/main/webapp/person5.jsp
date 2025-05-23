@@ -16,5 +16,6 @@
  
  <jsp:useBean id="person" class="och08.Person" scope="request"></jsp:useBean>
  <jsp:setProperty property="*" name="person"/>
+ <jsp:forward page="personResult.jsp"></jsp:forward>
 </body>
 </html>

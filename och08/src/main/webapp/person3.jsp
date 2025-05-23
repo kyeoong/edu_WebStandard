@@ -24,9 +24,9 @@
  %>
  
  	<jsp:useBean id="person" class="och08.Person" scope="request"></jsp:useBean>
- 	<jsp:setProperty property="name" name="person" value="<%=name %>"/>
- 	<jsp:setProperty property="name" name="gender" value="<%=gender %>"/>
- 	<jsp:setProperty property="name" name="age" value="<%=age %>"/>
+ 	<jsp:setProperty property="name" name="person" 	value="<%=name %>"/>
+ 	<jsp:setProperty property="name" name="gender" 	value="<%=gender %>"/>
+ 	<jsp:setProperty property="name" name="age" 	value="<%=age %>"/>
  	<jsp:forward page="personResult.jsp"></jsp:forward>
  	
 </body>

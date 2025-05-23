@@ -23,8 +23,8 @@
  
  	<jsp:useBean id="person" class="och08.Person" scope="request"></jsp:useBean>
 	 <jsp:setProperty property="name" 	name="person" param="name"/>
-	 <jsp:setProperty property="gender" name="person" param="남자"/>
-	 <jsp:setProperty property="age" 	name="person" param="23"/>
+	 <jsp:setProperty property="gender" name="person" value="남자"/>
+	 <jsp:setProperty property="age" 	name="person" value="23"/>
  	<jsp:forward page="personResult.jsp"></jsp:forward>
 </body>
 </html>
