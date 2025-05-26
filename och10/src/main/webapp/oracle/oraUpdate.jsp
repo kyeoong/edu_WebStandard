@@ -24,6 +24,15 @@
 	Class.forName(driver);
 	Connection conn = DriverManager.getConnection(url, "scott","tiger");
 	PreparedStatement ptmt = conn.prepareStatement(sql);
+	ptmt.setString(1, dname);
+	ptmt.setString(2, loc);
+	ptmt.setString(3, deptno);
+	
+	int result = ptmt.executeUpdate();
+	if(result>0) out.println("수정 성공 ㅎㅎ");
+	else         out.println("수정 >.<");
+	ptmt.close();
+	conn.close();
 	
 	
 	

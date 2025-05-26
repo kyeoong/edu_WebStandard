@@ -51,15 +51,16 @@
  */
  
 	// Collection ArrayList 생성 : 복수개로 있는 것을 단순 table로는 안됨, ArrayList 로 감싸서 가져간다 
-	ArrayList<Emp> al = new ArrayList<Emp>();
+	ArrayList<Emp> al = new ArrayList<Emp>();   // 마지막으로 여기에 al ─▶ [ emp1, emp2, emp3, ..., empN ]
 	if(rs.next()) {
 		do {
-			Emp emp = new Emp();
-			emp.setEmpno(rs.getInt(1));
+			Emp emp = new Emp();     			// → 빈 도시락 꺼내기
+			// 각 Emp 안에는 아래처럼 데이터가 들어있어요
+			emp.setEmpno(rs.getInt(1));    		// → 밥 담고, 반찬 담고
 			emp.setEname(rs.getString(2));
 			emp.setJob(rs.getString(3));
 			emp.setSal(rs.getInt(4));
-			al.add(emp);
+			al.add(emp);						// → 완성된 도시락을 배달 상자(ArrayList)에 넣기
 			
 		}while(rs.next());
 		request.setAttribute("al", al);

@@ -23,6 +23,7 @@
 	String deptno = request.getParameter("deptno");
 	String sql = "Select deptno, dname, loc from dept WHERE deptno = ?";
 	
+	Class.forName(driver);
 	Connection conn = DriverManager.getConnection(url,"scott","tiger");
 	PreparedStatement ptmt = conn.prepareStatement(sql);
 	
