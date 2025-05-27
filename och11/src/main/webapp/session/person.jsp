@@ -4,7 +4,7 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<title>Insert title here</title>
+<title>여기가 1번 폼</title>
 <style type="text/css">
 	table 	 {background-color: pink;}
 	tr:hover {background-color: orange;}
@@ -14,7 +14,7 @@
 <h2>회원가입</h2>
 <form action="personAgree.jsp">
 	<table border="1">
-		<tr><td>아이디</td> <td><input type="text" 	 	name="id"  			required="required"></td></tr>
+		<tr><td>아이디</td> <td><input  type="text" 	 	name="id"  			required="required"></td></tr>
 		<tr><td>암호 </td> <td><input  type="password"  	name="password"  	required="required"></td></tr>
 		<tr><td>이름 </td> <td><input  type="text" 		name="name"  		required="required"></td></tr>
 		<tr><td><input type="submit" value="확인"></td>
