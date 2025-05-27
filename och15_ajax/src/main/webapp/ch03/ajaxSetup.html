@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script type="text/javascript" src="../js/jquery.js"></script>
+<script type="text/javascript">
+	$(function() {
+		$('#sub').click(function(){
+			$.ajaxSetup({
+				type :'GET',
+				url  : 'checkIn.jsp',
+				dataType : 'text',
+				success : function(data1) {
+					$('#msg').html(data1)
+				}
+			});
+			
+			// 첫번째 방법
+		/* 	var name = $('#name').val();
+			var pass = $('#pass').val();
+			var sendData = 'name=' + name +"&pass="+pass; */
+			
+			// 두번째 방법  -->> 컬럼이 많으면 serialize()가    알아서 해준다
+			let sendData = $('form').serialize();
+			alert('sendData -->> ' + sendData);
+			
+			$.ajax({
+				data : sendData
+			});
+		});
+	});
+</script>
+</head>
+<body>
+	<form action="">
+		이름 : <input type="text" name="name" id="name"><p>
+		암호 : <input type="password" name="pass" id="pass"><p>
+		<input type="submit" id="sub" value="확인">
+	</form>
+	<div id ="msg"></div>
+</body>
+</html>

@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>ch01 ch02는 원리 라서 몰라도 돼 och03을 알아두어 쓸면 된다</title>
+</head>
+<body>
+<script type="text/javascript" src="../js/jquery.js"></script>
+<script type="text/javascript">
+	$(function (){
+		// sendRequest(url(server PGM), params, callback, method)
+		$('#menu1').click(function () {
+			$.ajax({
+				url 		: 'menu.jsp',        		// 서버에 요청할 파일
+				dataType 	: 'html',					 // 서버에서 받아올 데이터 형식 (text, json 등)
+				success 	: function (data) {			 // 요청 성공하면 실행할 콜백 함수
+						$('#msg1').html(data)			 // 받아온 데이터(data)를 HTML에 출력
+				}
+			});
+		});
+		
+		$('#menu2').click(function() {
+			$.ajax({
+				url 		: 'menu.jsp',
+				dataType 	: 'html',
+				success 	: function (data) {
+						$('#msg2').html($(data).find('li')); 
+				}
+			});
+		});
+		
+		
+		
+	})
+	
+	
+</script>
+</body>
+	<div><a id="menu1">메뉴선택</a><p>
+		<span id ="msg1"></span>
+	</div><p><p><p><p><p><p>
+	<div><a id="menu2">메뉴선택2</a><p>
+		<span id = "msg2"></span>
+	</div>
+</html>

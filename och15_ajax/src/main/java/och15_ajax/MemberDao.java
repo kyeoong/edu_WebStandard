@@ -1,0 +1,58 @@
+package och15_ajax;
+
+import java.sql.Connection;
+import java.sql.PreparedStatement;
+import java.sql.SQLException;
+
+import javax.naming.Context;
+import javax.naming.InitialContext;
+import javax.naming.NamingException;
+import javax.sql.DataSource;
+
+//Singleton + DBCP   4:14 5/27
+public class MemberDao {
+	
+	// Singleton   --> Resource 절감
+	private static MemberDao instance;   // 나 자신을 쓸 수 없지만 "공유" static
+	
+	// Default  -->> 애가 있어야 싱글톤
+	private MemberDao() {
+		
+	}
+	
+	public static MemberDao getInstance() {
+		if(instance == null) instance = new MemberDao();
+		
+		return instance; 
+		// 니꺼 있으면 니꺼 써
+	}
+	
+	// DBCP 
+	private Connection getConnection() throws SQLException {
+		Connection conn = null;
+		try {
+			Context ctx = new InitialContext();
+			DataSource ds = (DataSource)ctx.lookup("java:comp/env/jdbc/OracleDBs");
+			conn= ds.getConnection();
+		} catch (NamingException e) {
+			System.out.println(e.getMessage());
+		}
+		return conn;
+	}
+	
+	
+	// member1  Read 	
+	// int result = memberDao.confirm(id);
+	public int confirm(String id) {
+		int result = 0;
+		 // id 존재  --> return 1
+	     // id 존재X --> return 0
+		Connection conn = null;
+		PreparedStatement ptmt = null;
+		
+		
+		
+		
+		return result;
+	}
+}

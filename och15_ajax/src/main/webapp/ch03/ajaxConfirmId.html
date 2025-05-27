@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script type="text/javascript" src="../js/jquery.js"></script>
+<script type="text/javascript">
+	$(function () {
+		$('#chk').click(function()  {
+			var  id  = $('#id').val();     // input 태그 중 id="id"인 것
+			var sendData = 'id='+id        // 서버로 보낼 데이터를 URL 형식 문자열로 만듦 (예: id=hello123)
+			alert('sendData->' + sendData);
+			
+			$.ajax({
+				url 	: 'confirmId.jsp',
+				data 	: sendData,
+				dataType : 'text',
+				success : function (data1) { 
+					$('#msg').html(data1); // "사용할 수 있는 ID입니다" 외 1 메세지 출력
+				}
+			});
+		});
+	});
+</script>
+</head>
+<body>
+<h1>Model 1 회원가입 복습 강추(***) 5,27 3:43</h1>
+<form action="confirmId.jsp">
+	아이디 : <input type="text" name="id" id="id">
+	<input type="button" value="중복체크" id="chk">
+	<span id="msg"></span><p>
+	암호 : <input type="password" name="pass" id="pass"><p>
+	이름 : <input type="text" name="name" id = "name"	><p>
+	<input type="submit" value="확인">
+</form>
+</body>
+</html>
