@@ -2,6 +2,7 @@ package och15_ajax;
 
 import java.sql.Connection;
 import java.sql.PreparedStatement;
+import java.sql.ResultSet;
 import java.sql.SQLException;
 
 import javax.naming.Context;
@@ -32,7 +33,7 @@ public class MemberDao {
 		Connection conn = null;
 		try {
 			Context ctx = new InitialContext();
-			DataSource ds = (DataSource)ctx.lookup("java:comp/env/jdbc/OracleDBs");
+			DataSource ds = (DataSource)ctx.lookup("java:comp/env/jdbc/OracleDB");
 			conn= ds.getConnection();
 		} catch (NamingException e) {
 			System.out.println(e.getMessage());
@@ -41,18 +42,33 @@ public class MemberDao {
 	}
 	
 	
-	// member1  Read 	
+	// member1  Read 	  복습
 	// int result = memberDao.confirm(id);
-	public int confirm(String id) {
-		int result = 0;
-		 // id 존재  --> return 1
-	     // id 존재X --> return 0
+	public int confirm(String id) throws SQLException  {
+		int result  = 1;  
+		// member1 if  Exist    1
+		//             없으면     0  
 		Connection conn = null;
-		PreparedStatement ptmt = null;
+		String sql  = "select id from member1 where id=?"; 
+		PreparedStatement pstmt = null; 
+		ResultSet rs = null;
 		
-		
-		
+		try {
+			conn  = getConnection();
+			pstmt = conn.prepareStatement(sql);
+			pstmt.setString(1, id);
+			rs = pstmt.executeQuery();
+			if (rs.next()) result = 1;
+			else result = 0;
+		} catch (Exception e) {
+			System.out.println(e.getMessage());
+		} finally {
+			if (rs != null) rs.close();
+			if (pstmt != null) pstmt.close();
+			if (conn != null) conn.close();
+		}
 		
 		return result;
 	}
+
 }

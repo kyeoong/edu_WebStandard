@@ -23,7 +23,7 @@
 			$.ajax({
 				url 		: 'menu.jsp',
 				dataType 	: 'html',
-				success 	: function (data) {
+				success 	: function (data) {  // 서버엔진 'menu.jsp'에서 성공하여 결과를 html로   data에 넣는다
 						$('#msg2').html($(data).find('li')); 
 				}
 			});
