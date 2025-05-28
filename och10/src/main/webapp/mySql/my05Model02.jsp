@@ -19,7 +19,7 @@
 			<tr><td>${professor.profno }</td><td>${professor.name }</td>
 			<td>${professor.position }</td><td>${professor.sal }</td></tr>		
 		</c:forEach>
-		
+		여기는 뷰 코드만 쓴다
 		</table>
 		
 </body>
