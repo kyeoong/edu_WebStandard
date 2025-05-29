@@ -16,7 +16,7 @@
 <%
 	MemberDao md = MemberDao.getInstance();
 	Member member = md.select(id);
-	String context = request.getContextPath();
+	String context = request.getContextPath();   // Tomcat Meta data
 
 %>
 	<h2>회원정보 수정</h2>
@@ -24,7 +24,7 @@
 		<table border="1" id="tbl">
 		 <tr>
 		 	<td>아이디</td>
-		 	<td><input type="hidden" name="id" class="id" id="id"
+		 	<td><%=id %><input type="hidden" name="id" class="id" id="id"
 		 			   value="<%=member.getId()%>"></td>
 		 </tr>
 		 <tr>

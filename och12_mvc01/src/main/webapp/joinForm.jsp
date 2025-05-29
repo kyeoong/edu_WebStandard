@@ -71,7 +71,8 @@
 				<td><input type="tel" name="tel" required="required"
 						   pattern="\d{2,3}-\d{3,4}-\d{4}" placeholder="010-xxxx-xxxx"
 						   title="2,3자리-3,4자리-4자리"></td>
-			</tr>
+			</tr>        <!--   pattern = 숫자 2자리써 이런식으로 확인해주고 placeholder는 미리 보여지고 -->
+						 <!--   title 은 마우스 가져다 두면 보여준다 -->
 			<tr>
 				<td><input type="submit" value="확인"></td>
 				<td><input type="reset" value="취소"></td>

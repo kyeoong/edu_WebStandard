@@ -168,11 +168,12 @@ public class MemberDao {
 		Connection conn = null;
 		ResultSet rs = null;
 		PreparedStatement ptmt = null;
-		String sql = "Select * from member2 where id = " + id;
+		String sql = "Select * from member2 where id = ?";
 		
 		try {
 			conn = getConnection();
 			ptmt = conn.prepareStatement(sql);
+			ptmt.setString(1, id);
 			rs = ptmt.executeQuery();
 			if(rs.next()) {
 				member.setId(rs.getString(1));
@@ -191,6 +192,58 @@ public class MemberDao {
 		}
 		
 		return member;
+	}
+	
+	// updatePro.jsp     -->> 
+	public int update(Member member) throws SQLException {
+		int result = 0;
+		Connection conn = null;
+		PreparedStatement ptmt = null;
+		String sql = "Update member2 SET passwd = ? , name = ? , address = ?, tel = ? WHERE id = ?";
+		
+		try {
+			conn = getConnection();
+			ptmt = conn.prepareStatement(sql);
+			ptmt.setString(1, member.getPasswd());
+			ptmt.setString(2, member.getName());
+			ptmt.setString(3, member.getAddress());
+			ptmt.setString(4, member.getTel());
+			ptmt.setString(5, member.getId());
+			result = ptmt.executeUpdate();
+		} catch (SQLException e) {
+			System.out.println(e.getMessage());
+		} finally {
+			if(ptmt != null ) ptmt.close();
+			if(conn != null ) conn.close();
+		}
+		
+		
+		return result;
+	}
+	
+	// deletePro.jsp   
+	public int delete(String id, String passwd) throws SQLException {
+		int result = 0;
+		Connection conn = null;
+		PreparedStatement ptmt = null;
+		String sql = "Delete From member2 Where id = ? and passwd = ?";
+		
+		try {
+			conn = getConnection();
+			ptmt = conn.prepareStatement(sql);
+			ptmt.setString(1, id);
+			ptmt.setString(2, passwd);
+			result = ptmt.executeUpdate();
+			if(result > 0 ) result = 1;
+			else            result = 0;
+		} catch (SQLException e) {
+			System.out.println(e.getMessage());
+		} finally {
+			if(ptmt != null) ptmt.close();
+			if(conn != null) conn.close();
+		}
+		
+		return result;
 	}
 	
 	
