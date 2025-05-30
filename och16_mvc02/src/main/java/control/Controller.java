@@ -95,7 +95,7 @@ public class Controller extends HttpServlet {
 				// 만든 클래스를 인스턴스로 만들어준다
 				CommandProcess commandInstance = (CommandProcess) commandClass.getDeclaredConstructor().newInstance();
 				
-				//            		list.do(여긴 String)    service.ListAction(인스턴스가 되어 들어간다)
+				//            		list.do(여긴 String)    service.ListAction(인스턴스가 되어 들어간다, 객체라 주소가 들어간다)
 				//              writeForm.do  sservice.WriteFormAction
 				commandMap.put(command, commandInstance);
 			} catch (Exception e) {

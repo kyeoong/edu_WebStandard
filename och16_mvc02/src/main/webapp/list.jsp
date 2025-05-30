@@ -19,7 +19,7 @@
 	<h5>전체 건수 : ${totCnt }</h5>
 		<table>
 			<tr>
-				<td><a href="writerForm.do">글쓰기</a></td>
+				<td><a href="writeForm.do">글쓰기</a></td>
 			</tr>
 		</table>
 		<table>
@@ -50,6 +50,23 @@
 					<c:set var="startNum" value="${startNum -1 }"/>
 				</c:forEach>
 			</c:if>
+				<c:if test="${totCnt == 0 }">
+					<tr>
+						<td colspan="7">데이터가 없네</td>
+					</tr>
+				</c:if>
 		</table>
+		
+		<div style="text-align: center;">
+			<c:if test="${startPage > blockSize }">
+				<a href="list.do?pageNum=${startPage-blockSize }">[이전]</a>
+			</c:if>
+			<c:forEach var="i" begin="${startPage }" end="${endPage }">
+				<a href="list.do?pageNum=${i }">[${i }]</a>
+			</c:forEach>
+			<c:if test="${endPage < pageCnt }">
+				<a href="list.do?pageNum=${startPage+blockSize }">[다음]</a>
+			</c:if>	
+		</div>
 </body>
 </html>
