@@ -194,17 +194,135 @@ public class BoardDao {
 		return result;
 	}
 
-	public int insert(Board board) {
+	public int insert(Board board) throws SQLException {
+		int result = 0;
+		int num = board.getNum();
+		Connection conn = null;
+		PreparedStatement ptmt = null;
+		ResultSet rs = null;
+		
+		// 신규글 + 댓글 PK : 현재 게시판에서 가장 큰 num 값 가져오기
+		String sql1 = "Select nvl(max(num),0) From Board";
+		
+		// 홍해의 기적 --> 댓글 공용
+		// 댓글일 경우: 같은 ref 그룹 내에서 현재 re_step보다 큰 값들 re_step + 1 (댓글 밀어내기)
+		String sql2 = "Update board Set re_step = re_step+1 Where ref = ? and re_step > ?";
+		
+		// 신규글 + 댓글 공융 : 실제 글 저장
+		String sql3 = "Insert into board values(?,?,?,?,?,?,?,?,?,?,?,sysdate)";
+		
+		try {
+			// sql1 실행: 현재 최대 num 구하기
+			conn = getConnection();
+			ptmt = conn.prepareStatement(sql1);
+			rs = ptmt.executeQuery();
+			rs.next(); // 결과가 있다고 가정하고 바로 이동
+			// key인 num 1씩 증가, mysql auto_increment 또는 oracle sequence
+			// sequence를 사용 : values(시퀀스명(board_seq).nextval,?,?...)
+			int number = rs.getInt(1) + 1;
+			rs.close();
+			ptmt.close();
+			
+			// sql2 -- > 댓글일 경우 실행되는 블록
+			if(num != 0)  {
+				System.out.println("BoardDao insert 댓글 sql2-> " +sql2);
+				System.out.println("BoardDao insert 댓글 board.getRef()-> " +board.getRef());
+				System.out.println("BoardDao insert 댓글 board.getRe_step()-> " +board.getRe_step());
+				// 기존 댓글들 밀어내기
+				ptmt = conn.prepareStatement(sql2);
+				ptmt.setInt(1, board.getRef());
+				ptmt.setInt(2, board.getRe_step());
+				ptmt.executeUpdate();
+				ptmt.close();
+				// 여기까지 끼어들 댓글 존재 하면 밀기
+				
+				//  새 댓글이 들어갈 자리 설정  밀어서 생긴 자리에 데이터 넣기 / 댓글 관련 정보
+				board.setRe_step(board.getRe_step()+1);
+				board.setRe_level(board.getRe_level()+1);
+			}
+			// sql3
+			// 신규 글일 경우: ref 값 세팅 (자기 자신을 기준으로 그룹화)
+			if(num == 0 ) board.setRef(number);
+			// 실제 글 DB 저장
+			ptmt = conn.prepareStatement(sql3);
+			ptmt.setInt(1, number);
+			ptmt.setString(2, board.getWriter());
+			ptmt.setString(3, board.getSubject());
+			ptmt.setString(4, board.getContent());
+			ptmt.setString(5, board.getEmail());
+			ptmt.setInt(6, board.getReadcount());
+			ptmt.setString(7, board.getPasswd());
+			ptmt.setInt(8, board.getRef());
+			ptmt.setInt(9, board.getRe_step());
+			ptmt.setInt(10, board.getRe_level());
+			ptmt.setString(11, board.getIp());
+			result = ptmt.executeUpdate();
+		} catch(Exception e) {	
+			System.out.println(e.getMessage()); 
+		} finally {
+			if (rs !=null) rs.close();
+			if (ptmt != null) ptmt.close();
+			if (conn !=null) conn.close();
+		}
+
+		return result;
+	}
+
+	public int delete(int num, String passwd) throws SQLException {
 		int result = 0;
 		Connection conn = null;
 		PreparedStatement ptmt = null;
-		String sql = "Insert into board Select max(num)+1, ? , ? , ?, ? , ? , ? ,? ,? , ? , ? , sysdate From BOARD";
+		String sql = "Delete From board Where num = ? and passwd = ?";
 		
 		try {
 			conn = getConnection();
 			ptmt = conn.prepareStatement(sql);
+			ptmt.setInt(1, num);
+			ptmt.setString(2, passwd);
+			result = ptmt.executeUpdate();
+		} catch (Exception e) {
+			System.out.println(e.getMessage());
+		} finally {
+			if (ptmt != null) ptmt.close();
+			if (conn !=null) conn.close();
 		}
-		return 0;
+		return result;
 	}
+	
+	public int delete3(int num, String passwd) throws SQLException {
+		int result = 0;
+		Connection conn = null;
+		PreparedStatement ptmt = null;
+		String sql1 = "Select passwd from board Where num=?";
+		String sql2 = "Delete From board Where num = ?";
+		ResultSet rs = null;
+		// 2:05 전 설명 06/02
+		// 댓글 까지 삭제 방법
+		
+		try {
+			String dbPasswd = "";
+			conn = getConnection();
+			ptmt = conn.prepareStatement(sql1);
+			ptmt.setInt(1, num);
+			rs = ptmt.executeQuery();
+			if(rs.next()) {
+				dbPasswd = rs.getString(1);
+				if(dbPasswd.equals(passwd)) {
+					rs.close();
+					ptmt.close();
+					ptmt = conn.prepareStatement(sql2);
+					ptmt.setInt(1, num);
+					result = ptmt.executeUpdate();
+				} else result = 0;
+			} else result = -1;
+		} catch (Exception e) {
+			System.out.println(e.getMessage());
+		} finally {
+			if (ptmt != null) ptmt.close();
+			if (conn !=null) conn.close();
+		}
+		return result;
+	}
+	
 
 }

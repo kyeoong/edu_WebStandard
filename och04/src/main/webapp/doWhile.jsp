@@ -11,33 +11,28 @@
 <table border="1" bgcolor="yellow">
 	<tr>
 		<%
-		
-		int i = 2;
-		do{
-			out.println("<th>" + i + "단</th>");
-			i++;
-		} while(i<=9);
-		out.println("</tr><tr>");
-		i=2;
-		int j = 1;
-		do {
-			if(i%2==0){
-					out.println("<td bgcolor =pink>");
-			} else 	out.println("<td bgcolor =orange>");
-			
+			int i = 2;
 			do {
-				out.println(i + " * " + j + " = " + i*j + "<br>");
-				j++;
-			} while(j<=9);
+				out.println("<th>" + i + "단</th>");
+				i++;
+			}while(i<=9);
+			out.println("</tr><tr>");
 			
-			out.println("</td>");
-			j=1;
-			i++;
-			
-		}while(i<=9);
+			i=2;
+			int j = 1;
 		
-		
-		
+			do {
+				if(i%2==0) out.println("<td bgcolor = pink>");
+				else       out.println("<td bgcolor = orange>");
+				
+				do {
+					out.println(i + " * " + j + " = " + i*j + "<br>");
+					j++;
+				}while(j<=9);
+				out.println("</td>");
+				j=1;
+				i++;
+			}while(i<=9);
 		%>
 	</tr>
 </table>

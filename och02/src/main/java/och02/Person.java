@@ -42,7 +42,7 @@ public class Person extends HttpServlet {
 		String[] notice = request.getParameterValues("notice");
 		String job = request.getParameter("job");
 		
-		response.setContentType("");
+		response.setContentType("text/html;charset=utf-8");
 		PrintWriter out = response.getWriter();
 		out.println("<html><body><h1>개인정보</h1>");
 		out.println("이름 : "+ name + "<p>");

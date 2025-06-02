@@ -20,11 +20,17 @@
 		hob += hobby[i]+" ";
 	}
 	// HW01. "/WEB-INF/file/"+id+".txt"로 만들기
+	
 	/* request.setAttribute("id", id);
 	request.setAttribute("password", password);
 	request.setAttribute("name", name);
 	request.setAttribute("hobby", hobby);
-	request.setAttribute("gender", gender); */
+	request.setAttribute("gender", gender); 
+	
+	setAttribute는 A.jsp → B.jsp로 forward할 때 사용
+	
+	*/
+	
 	String msg = "회원정보\r\n아이디 : "+ id +"\r\n 암호 : " + password + "\r\n이름 : " + name + "\r\n취미 : " + hob + "\r\nt성별 : " + gender ;
 	
 	String real = application.getRealPath("/WEB-INF/file/"+id+".txt");

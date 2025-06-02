@@ -23,7 +23,7 @@
 		<tr><td>내용</td><td><pre>${board.content }</pre></td></tr>
 		<tr><td colspan="2">
 		<input type="button" value="수정" onclick="location.href='updateForm.do?num=${board.num}&pageNum=${pageNum }'">
-		<input type="button" value="답변작성" onclick="location.href='writerForm.do?num=${board.num}&pageNum=${pageNum }'">
+		<input type="button" value="답변작성" onclick="location.href='writeForm.do?num=${board.num}&pageNum=${pageNum }'">
 		<input type="button" value="삭제" onclick="location.href='deleteForm.do?num=${board.num}&pageNum=${pageNum }'">
 		<input type="button" value="목록" onclick="location.href='list.do?pageNum=${pageNum }'">
 		<%-- pageNum=${pageNum } 을 가져다니는 이유는 되돌아 왔을때 페이지 넘버를 가지고 다닌다 --%>

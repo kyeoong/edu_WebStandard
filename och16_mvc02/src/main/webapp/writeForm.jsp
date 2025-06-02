@@ -9,7 +9,7 @@
 <link rel="stylesheet" type="text/css" href="style.css">
 </head>
 <body>
-	<form action="writerPro.do?pageNum=${pageNum }" method="post">
+	<form action="writePro.do?pageNum=${pageNum }" method="post">
 		<input type="hidden" name="num" value="${num }">
 		<input type="hidden" name="ref" value="${ref }">
 		<input type="hidden" name="re_level" value="${re_level }">
